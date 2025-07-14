@@ -14,12 +14,11 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # временно разреши всех
-    allow_credentials=False,  # только на время
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# # Подключение к OpenAI (предпочтительно через переменную окружения)
 client = OpenAI()
 
 logger = logging.getLogger(__name__)
