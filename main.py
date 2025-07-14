@@ -12,7 +12,7 @@ import logging
 setup_logging()
 app = FastAPI()
 
-origins = ["https://scriptoMisha.github.io/PlanProcessing"]
+origins = ["https://scriptoMisha.github.io"]
 
 app.add_middleware(
     CORSMiddleware,
