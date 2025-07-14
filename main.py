@@ -12,12 +12,10 @@ import logging
 setup_logging()
 app = FastAPI()
 
-origins = ["https://scriptoMisha.github.io"]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
-    allow_credentials=True,
+    allow_origins=["*"],  # временно разреши всех
+    allow_credentials=False,  # только на время
     allow_methods=["*"],
     allow_headers=["*"],
 )
